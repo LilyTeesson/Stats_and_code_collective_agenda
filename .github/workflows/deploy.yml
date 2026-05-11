@@ -25,6 +25,6 @@ jobs:
           source-directory: "."
           destination-github-username: "LilyTeesson"
           destination-repository-name: "StaCC_Agenda"
-          target-branch: main
+          target-branch: master
           commit-message: "update agenda"
           include-files: "index.html"
