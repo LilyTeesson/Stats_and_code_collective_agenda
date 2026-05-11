@@ -20,7 +20,7 @@ jobs:
       - name: Deploy to public repo
         uses: cpina/github-action-push-to-another-repository@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOPY_TOKEN }}
         with:
           source-directory: "."
           destination-github-username: "LilyTeesson"
