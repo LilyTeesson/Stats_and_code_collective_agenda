@@ -3,7 +3,7 @@ name: Deploy to Public Repo
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
