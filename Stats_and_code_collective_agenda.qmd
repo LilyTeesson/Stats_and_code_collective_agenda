@@ -1,8 +1,9 @@
 ---
 format: 
-  pdf:
+  html:
     mainfont: "Courier New"
     fontsize: 10pt
+    output-file: "index.html"
 editor: visual
 ---
 

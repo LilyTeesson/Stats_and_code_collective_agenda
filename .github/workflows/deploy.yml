@@ -1,0 +1,27 @@
+name: Deploy to Public Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Render Quarto
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Deploy to public repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+        with:
+          source-directory: "."
+          destination-github-username: "LilyTeesson"
+          destination-repository-name: "Stats_and_code_collective_agenda"
+          target-branch: main
+          commit-message: "update agenda"
+          include-files: "index.html"
