@@ -1,0 +1,46 @@
+/* =========================
+   GLOBAL HIDING RULES
+   ========================= */
+
+/* Hide headings */
+h1, h2, h3, h4, h5, h6 {
+  display: none;
+}
+
+/* Hide narrative text */
+p, li {
+  display: none;
+}
+
+/* Hide code input (but keep outputs like flextables) */
+.cell-code,
+pre.sourceCode,
+pre code {
+  display: none;
+}
+
+/* Hide separators */
+hr {
+  display: none;
+}
+
+/* =========================
+   EXEMPT CONTENT
+   ========================= */
+
+/* Show everything inside .keep-visible */
+.keep-visible,
+.keep-visible * {
+  display: block !important;
+}
+
+/* Optional styling for the visible header */
+.keep-visible h1 {
+  margin-bottom: 0.2em;
+}
+
+.keep-visible p {
+  margin-top: 0;
+  font-style: italic;
+}
+``
