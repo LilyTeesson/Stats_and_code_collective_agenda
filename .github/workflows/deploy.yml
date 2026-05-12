@@ -17,14 +17,18 @@ jobs:
       - name: Render Quarto
         uses: quarto-dev/quarto-actions/render@v2
 
+      - name: Copy index.html to output folder
+        run: |
+          mkdir -p output
+          cp index.html output/index.html
+
       - name: Deploy to public repo
         uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.DEPLOPY_TOKEN }}
         with:
-          source-directory: "."
+          source-directory: "output"
           destination-github-username: "LilyTeesson"
           destination-repository-name: "StaCC_Agenda"
           target-branch: master
           commit-message: "update agenda"
-          include-files: "index.html"
