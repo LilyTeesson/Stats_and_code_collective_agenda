@@ -4,6 +4,9 @@ format:
     mainfont: "Courier New"
     fontsize: 10pt
     output-file: "index.html"
+    body-width: 900px
+    margin-left: auto
+    margin-right: auto
 editor: visual
 ---
 
