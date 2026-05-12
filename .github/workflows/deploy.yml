@@ -16,6 +16,8 @@ jobs:
 
       - name: Render Quarto
         uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: "Stats_and_code_collective_agenda.qmd"
 
       - name: Copy index.html to output folder
         run: |
