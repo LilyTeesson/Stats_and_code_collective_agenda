@@ -29,6 +29,6 @@ jobs:
         with:
           source-directory: "output"
           destination-github-username: "LilyTeesson"
-          destination-repository-name: "stats_and_code_collective_agenda"
+          destination-repository-name: "Stats_and_code_collective_agenda"
           target-branch: master
           commit-message: "update agenda"
